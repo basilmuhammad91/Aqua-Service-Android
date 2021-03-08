@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_margin="5dp"
+    android:paddingBottom="10dp"
+    android:paddingLeft="8dp"
+    android:paddingRight="8dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_weight="4"
+        android:padding="10dp"
+        android:orientation="vertical"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/txt_full_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ali Ahmed"
+            android:textSize="22sp"
+            android:textColor="@color/black"
+        />
+
+        <TextView
+            android:id="@+id/txt_service_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Service: Plumber"
+            android:textSize="14sp"
+            />
+
+        <TextView
+            android:id="@+id/txt_contact"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Contact No: 03215487605"
+            android:textSize="14sp"
+            />
+
+        <TextView
+            android:id="@+id/txt_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Rs: 50 per hour working charges"
+            android:textSize="14sp"
+            />
+
+        <Button
+            android:id="@+id/btn_book"
+            android:background="@color/color"
+            android:text="Book Me"
+            android:textSize="10sp"
+            android:layout_marginTop="5dp"
+            android:layout_width="wrap_content"
+            android:textColor="#ffffff"
+            android:layout_height="30dp" />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:padding="10dp"
+        android:layout_weight="2"
+        android:orientation="vertical"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/img"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center"
+            android:src="@drawable/avatar"/>
+
+        <ImageView
+            android:id="@+id/f_img"
+            android:layout_toRightOf="@id/img"
+            android:layout_width="40dp"
+            android:layout_marginTop="10dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:src="@drawable/heart"/>
+
+        <ImageView
+            android:id="@+id/img_phone"
+            android:layout_below="@id/img"
+            android:src="@drawable/phone"
+            android:padding="5dp"
+            android:background="@color/color"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content" />
+
+
+
+    </RelativeLayout>
+
+</LinearLayout>
