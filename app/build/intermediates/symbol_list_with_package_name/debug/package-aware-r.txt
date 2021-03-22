@@ -2281,7 +2281,6 @@ id card_deliver
 id card_ride
 id card_service
 id card_shop
-id categorySpinner
 id center
 id center_horizontal
 id center_vertical
@@ -2562,6 +2561,8 @@ id search_voice_btn
 id select_dialog_listview
 id selected
 id selection_type
+id serviceSpinner
+id service_id
 id service_name
 id shopslist
 id shortcut
@@ -2578,6 +2579,7 @@ id snackbar_text
 id snap
 id snapMargins
 id spacer
+id spinner1
 id spline
 id split_action_bar
 id spread
@@ -2596,7 +2598,6 @@ id staticPostLayout
 id status_bar_latest_event_content
 id stop
 id stretch
-id subCategorySpinner
 id submenuarrow
 id submit_area
 id tabMode
@@ -2609,6 +2610,7 @@ id tag_transition_group
 id tag_unhandled_key_event_manager
 id tag_unhandled_key_listeners
 id terrain
+id territory_id
 id test_checkbox_android_button_tint
 id test_checkbox_app_button_tint
 id test_radiobutton_android_button_tint
@@ -2736,6 +2738,7 @@ layout activity_delivery
 layout activity_drop_off_location
 layout activity_m_a_p
 layout activity_main
+layout activity_new_spinner
 layout activity_productdetail
 layout activity_productsearch
 layout activity_produtcard

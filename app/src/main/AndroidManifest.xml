@@ -21,7 +21,8 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Aqua"
         android:usesCleartextTraffic="true">
-        <activity android:name=".ViewServiceSingle"></activity>
+
+        <activity android:name=".ViewServiceSingle" />
         <activity android:name=".MAP" />
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
@@ -56,10 +57,10 @@
         <activity android:name=".Cancelride" />
         <activity android:name=".ViewAllServices" />
         <activity android:name=".rides" />
+        <activity android:name=".NewSpinner"></activity>
         <activity android:name=".ServiceMainDashboard">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>

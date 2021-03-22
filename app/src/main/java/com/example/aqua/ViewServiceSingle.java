@@ -29,7 +29,5 @@ public class ViewServiceSingle extends AppCompatActivity {
         contact_no.setText("Contact No:  "+contactNo);
         price.setText("Rs: "+price2+" per hour working charges");
 
-
-
     }
 }

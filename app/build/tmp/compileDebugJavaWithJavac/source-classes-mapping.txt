@@ -1,11 +1,19 @@
-com/example/aqua/ViewAllServices.java
- com.example.aqua.ViewAllServices
- com.example.aqua.ViewAllServices$1
- com.example.aqua.ViewAllServices$2
+com/example/aqua/ViewServiceSingle.java
+ com.example.aqua.ViewServiceSingle
+com/example/aqua/Territory.java
+ com.example.aqua.Territory
 com/example/aqua/Service.java
  com.example.aqua.Service
 com/example/aqua/Cancelride.java
  com.example.aqua.Cancelride
+com/example/aqua/ServiceMainDashboard.java
+ com.example.aqua.ServiceMainDashboard
+ com.example.aqua.ServiceMainDashboard$1
+ com.example.aqua.ServiceMainDashboard$1$1
+ com.example.aqua.ServiceMainDashboard$2
+ com.example.aqua.ServiceMainDashboard$3
+ com.example.aqua.ServiceMainDashboard$3$1
+ com.example.aqua.ServiceMainDashboard$4
 com/example/aqua/wallet.java
  com.example.aqua.wallet
 com/example/aqua/delivery.java
@@ -74,9 +82,15 @@ com/example/aqua/Territories.java
  com.example.aqua.Territories
 com/example/aqua/Shopsrecord.java
  com.example.aqua.Shopsrecord
+com/example/aqua/ServiceSingle.java
+ com.example.aqua.ServiceSingle
 com/example/aqua/button.java
  com.example.aqua.button
-com/example/aqua/ViewServiceSingle.java
- com.example.aqua.ViewServiceSingle
-com/example/aqua/ServiceMainDashboard.java
- com.example.aqua.ServiceMainDashboard
+com/example/aqua/ViewAllServices.java
+ com.example.aqua.ViewAllServices
+ com.example.aqua.ViewAllServices$1
+ com.example.aqua.ViewAllServices$2
+ com.example.aqua.ViewAllServices$3
+com/example/aqua/NewSpinner.java
+ com.example.aqua.NewSpinner
+ com.example.aqua.NewSpinner$1

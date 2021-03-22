@@ -70,6 +70,7 @@
         <activity android:name="com.example.aqua.Cancelride" />
         <activity android:name="com.example.aqua.ViewAllServices" />
         <activity android:name="com.example.aqua.rides" />
+        <activity android:name="com.example.aqua.NewSpinner" />
         <activity android:name="com.example.aqua.ServiceMainDashboard" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

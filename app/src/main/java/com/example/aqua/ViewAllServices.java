@@ -1,11 +1,13 @@
 package com.example.aqua;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.ListView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.android.volley.AuthFailureError;
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
@@ -18,14 +20,19 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 
 public class ViewAllServices extends AppCompatActivity {
 
     ListView listView;
     ServiceAdapter serviceAdapter;
     public static ArrayList<Service> serviceArrayList = new ArrayList<>();
-    String url = "http://192.168.10.5/aqua/public/api/servicelists";
+    String url = "http://"+ServiceMainDashboard.myIp+"/aqua/public/api/servicelists";
+    String searchUrl = "http://"+ServiceMainDashboard.myIp+"/aqua/public/api/servicesearch";
     Service service;
+    String territoryId;
+    String serviceId;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,12 +42,16 @@ public class ViewAllServices extends AppCompatActivity {
         listView = findViewById(R.id.myListView);
         serviceAdapter = new ServiceAdapter(this, serviceArrayList);
         listView.setAdapter(serviceAdapter);
+
+        Intent intent = getIntent();
+        territoryId = intent.getStringExtra("TerritoryId");
+        serviceId = intent.getStringExtra("ServiceId");
         retrieveData();
     }
 
     public void retrieveData()
     {
-        StringRequest request = new StringRequest(Request.Method.GET, url,
+        StringRequest request = new StringRequest(Request.Method.POST, searchUrl,
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
@@ -51,7 +62,6 @@ public class ViewAllServices extends AppCompatActivity {
 
                             for (int i = 0; i < jsonArray1.length();i++)
                             {
-
                                 JSONObject object = jsonArray1.getJSONObject(i);
                                 String ServiceListsId = object.getString("ServiceListsId");
                                 String UserId = object.getString("UserId");
@@ -71,7 +81,7 @@ public class ViewAllServices extends AppCompatActivity {
                         }
                         catch (JSONException e)
                         {
-                            e.printStackTrace();
+                            Toast.makeText(ViewAllServices.this, ""+e.getMessage(), Toast.LENGTH_SHORT).show();
                         }
                     }
                 }, new Response.ErrorListener() {
@@ -79,7 +89,17 @@ public class ViewAllServices extends AppCompatActivity {
             public void onErrorResponse(VolleyError error) {
                 Toast.makeText(ViewAllServices.this, error.getMessage(), Toast.LENGTH_SHORT).show();
             }
-        });
+        })
+        {
+            @Override
+            protected Map<String, String> getParams() throws AuthFailureError {
+                HashMap<String,String> map=new HashMap<>();
+                map.put("territory_id", territoryId);
+                map.put("service_id", serviceId);
+                return map;
+            }
+        }
+                ;
 
         RequestQueue requestQueue = Volley.newRequestQueue(this);
         requestQueue.add(request);
